@@ -1,5 +1,5 @@
 <!DOCTYPE html><html lang="zh-cn"><!-- This web page is copied by the "https://bazhan.wang" --><head><meta charset="utf-8">
-    <title>黑暗光环darkHalo.cn</title>
+    <title>darkHalo.cn</title>
     
     <meta name="keywords" content="darkHalo,darkHalo.cn,黑暗光环,技术博客,个人主页,程序员,架构师,IT,Gitee,darkHalo,Github,Coding,Code,开源,开源项目">
     <meta name="description" content="对，这是一个很苍白的个人主页。">
@@ -229,13 +229,35 @@
             animation-delay: 2s;
             opacity: 0;
         }
+        .xpm{
+            position: relative;
+            left: 0;
+            right: 0;
+            top: calc(50% - 66px);
+            bottom: 0;
+            font-size: 50px;
+            color: #fff;
+            margin: 0;
+            text-align: center;
+            display: none;
+        }
+        @media screen and (max-width:768px) {
+            #app{
+                display: none;
+            }
+            .xpm{
+                display: block;
+            }
+        }
     </style>
 </head>
 
 <body>
     <noscript><strong>No JavaScript</strong>
     </noscript>
-    <div class="bg"></div>
+    <div class="bg">
+        <p class="xpm">你的<span style="font-size:20px">屏幕</span>太小了</p>
+    </div>
     <div id="app">
         <div class="title">Hey,It's darkHalo!</div>
         <div class="body">
@@ -244,7 +266,7 @@
                 <div class="name">Github</div>
                 <div class="desc">Github仓库地址</div>
             </a>
-            <a class="card item2" target="_blank" href="https://gitee.com/blessy"> <i class="iconfont icon-gitee"></i>
+            <a class="card item2" target="_blank" href="https://gitee.com/blessyu"> <i class="iconfont icon-gitee"></i>
 
                 <div class="name">Gitee</div>
                 <div class="desc">国内的代码仓库地址</div>
@@ -257,9 +279,9 @@
             <div class="card item4"> <i class="iconfont icon-icon_namecard_fill"></i>
 
                 <div class="name">我的简介</div>
-                <div class="desc">慢慢了解，我懒得介绍</div>
+                <div class="desc">，在校大学生</div>
             </div>
-            <a class="card item5" target="_blank" href="mailto:525180891@qq.com"> <i class="iconfont icon-changyongtubiao-mianxing-31"></i>
+            <a class="card item5" target="_blank" href="mailto:77whitemoon@gmail.com"> <i class="iconfont icon-changyongtubiao-mianxing-31"></i>
 
                 <div class="name">给我发邮件</div>
                 <div class="desc">这是联系我最快的方式</div>
@@ -275,7 +297,7 @@
                 <div class="desc">敬请期待</div>
             </a>
         </div>
-        <div class="copyright">CopyLeft ©{{new Date().getFullYear()}} 黑暗光环 darkHalo.cn </div>
+        <div class="copyright">CopyLeft ©{{new Date().getFullYear()}} darkHalo.cn</div>
     </div>
 
 <script src="js/vue-2.6.10.min.js"></script>
