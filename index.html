@@ -1,0 +1,351 @@
+<!DOCTYPE html><html lang="zh-cn"><!-- This web page is copied by the "https://bazhan.wang" --><head><meta charset="utf-8">
+    <title>darkHalo.cn</title>
+    
+    <meta name="keywords" content="darkHalo,darkHalo.cn,黑暗光环,技术博客,个人主页,程序员,架构师,IT,Gitee,darkHalo,Github,Coding,Code,开源,开源项目">
+    <meta name="description" content="对，这是一个很苍白的个人主页。">
+    <meta name="mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="theme-color" content="#111">
+    
+    <link rel="icon" href="favicon.ico">
+    <meta name="format-detection" content="telephone=no">
+    <meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no">
+    <link rel="stylesheet" href="https://at.alicdn.com/t/font_666204_rqkrsdcpea.css">
+    <style>
+        html,
+        body {
+            padding: 0;
+            margin: 0;
+            background: #111;
+            cursor: url(&#x27;css/default.cur&#x27;), default;
+        }
+
+        @font-face {
+            font-family: &#x27;Gotham-Book&#x27;;
+            src: url(&#x27;fonts/Gotham-Book.woff2&#x27;);
+        }
+
+        * {
+            font-family: &#x27;Gotham-Book&#x27;;
+        }
+
+        [v-cloak] {
+            visibility: hidden !important;
+        }
+
+        a {
+            text-decoration: none;
+        }
+
+        body {
+            position: fixed;
+            left: 0;
+            right: 0;
+            top: 0;
+            bottom: 0;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-direction: column;
+        }
+
+        .title {
+            font-size: 48px;
+            color: #aaa;
+            font-weight: 100;
+            margin-bottom: 320px;
+            animation: title-animation 1s cubic-bezier(0.55, 0.09, 0.68, 0.53) forwards;
+            animation-delay: 1.5s;
+            opacity: 0;
+        }
+
+        .body {
+            display: flex;
+            flex-direction: row;
+            justify-content: center;
+            align-items: center;
+            perspective: 500px;
+            position: fixed;
+            left: 0;
+            right: 0;
+            top: 0;
+            bottom: 0;
+        }
+
+        .bg {
+            position: absolute;
+            left: 0;
+            right: 0;
+            top: 0;
+            bottom: 0;
+            background: #000 url(img/bg.jpeg) center center no-repeat;
+            background-size: cover;
+        }
+
+        .card {
+            background-color: rgba(255, 255, 255, 0.1);
+            backdrop-filter: blur(20px);
+            margin: 0px;
+            width: 180px;
+            height: 240px;
+            justify-content: center;
+            align-items: center;
+            display: flex;
+            flex-direction: column;
+            color: #999;
+            border-radius: 20px;
+            text-align: center;
+            cursor: url(&#x27;css/pointer.cur&#x27;), pointer;
+            transition: all 0.5s;
+            position: relative;
+            overflow: hidden;
+            opacity: 0;
+            animation: light 1s cubic-bezier(0.55, 0.09, 0.68, 0.53) forwards;
+        }
+
+        @keyframes light {
+            0% {
+                opacity: 0;
+                /* transform: translateZ(-1000px) rotate(180deg); */
+            }
+
+            60% {
+                margin-top: 50px;
+                opacity: 0.3;
+            }
+
+            100% {
+                margin-top: 0px;
+                opacity: 1;
+            }
+        }
+
+        @keyframes title-animation {
+            0% {
+                transform: scale(5, 5);
+            }
+
+            40% {
+                transform: scale(2, 2);
+                opacity: 0;
+            }
+
+            100% {
+                margin-top: 0px;
+                opacity: 1;
+            }
+        }
+
+        @keyframes copyright-animation {
+            0% {
+                opacity: 0;
+                margin-bottom: -100px;
+            }
+
+            100% {
+                margin-bottom: 0px;
+                opacity: 1;
+            }
+        }
+
+        .card .iconfont {
+            font-size: 64px;
+        }
+
+        .card .name {
+            margin-top: 30px;
+            font-size: 20px;
+        }
+
+        .card .desc {
+            font-size: 12px;
+            color: #333;
+            margin-top: 5px;
+        }
+
+        .card:hover {
+            transform: scale(1.2, 1.2);
+            z-index: 1;
+            color: #fff;
+            backdrop-filter: blur(20px);
+        }
+
+        .card:hover .desc {
+            color: #666;
+        }
+
+        .card .card-info {
+            display: none;
+        }
+
+        .item1 {
+            transform: rotateY(100deg) scale(0.9, 0.9);
+            animation-delay: 1s;
+        }
+
+        .item2 {
+            transform: rotateY(60deg) scale(0.7, 0.7);
+            animation-delay: .7s;
+        }
+
+        .item3 {
+            transform: rotateY(40deg) scale(0.5, 0.5);
+            margin: 0px -10px;
+            animation-delay: .4s;
+        }
+
+        .item4 {
+            transform: rotateY(0deg) scale(0.4, 0.4);
+            margin: 0px -50px;
+            animation-delay: .1s;
+        }
+
+        .item5 {
+            transform: rotateY(-40deg) scale(0.5, 0.5);
+            margin: 0px -10px;
+            animation-delay: .4s;
+        }
+
+        .item6 {
+            transform: rotateY(-60deg) scale(0.7, 0.7);
+            animation-delay: .7s;
+        }
+
+        .item7 {
+            transform: rotateY(-100deg) scale(0.9, 0.9);
+            animation-delay: 1s;
+        }
+
+        .copyright {
+            position: fixed;
+            left: 0;
+            right: 0;
+            bottom: 30px;
+            color: #666;
+            text-align: center;
+            font-weight: 100;
+            font-size: 14px;
+            animation: copyright-animation 1s cubic-bezier(0.55, 0.09, 0.68, 0.53) forwards;
+            animation-delay: 2s;
+            opacity: 0;
+        }
+        .xpm{
+            position: relative;
+            left: 0;
+            right: 0;
+            top: calc(50% - 66px);
+            bottom: 0;
+            font-size: 50px;
+            color: #fff;
+            margin: 0;
+            text-align: center;
+            display: none;
+        }
+        @media screen and (max-width:768px) {
+            #app{
+                display: none;
+            }
+            .xpm{
+                display: block;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <noscript><strong>No JavaScript</strong>
+    </noscript>
+    <div class="bg">
+        <p class="xpm">你的<span style="font-size:20px">屏幕</span>太小了</p>
+    </div>
+    <div id="app">
+        <div class="title">Hey,It's darkHalo!</div>
+        <div class="body">
+            <a class="card item1" target="_blank" href="https://github.com/darkHaloCn"> <i class="iconfont icon-git"></i>
+
+                <div class="name">Github</div>
+                <div class="desc">Github仓库地址</div>
+            </a>
+            <a class="card item2" target="_blank" href="https://gitee.com/blessyu"> <i class="iconfont icon-gitee"></i>
+
+                <div class="name">Gitee</div>
+                <div class="desc">国内的代码仓库地址</div>
+            </a>
+            <div class="card item3"> <i class="iconfont icon-wechat"></i>
+
+                <div class="name">微信号</div>
+                <div class="desc">darkHaloCn</div>
+            </div>
+            <div class="card item4"> <i class="iconfont icon-icon_namecard_fill"></i>
+
+                <div class="name">我的简介</div>
+                <div class="desc">，在校大学生</div>
+            </div>
+            <a class="card item5" target="_blank" href="mailto:77whitemoon@gmail.com"> <i class="iconfont icon-changyongtubiao-mianxing-31"></i>
+
+                <div class="name">给我发邮件</div>
+                <div class="desc">这是联系我最快的方式</div>
+            </a>
+            <a class="card item6" target="_blank" href="tencent://Message/?Uin=919433667&websiteName=www.oicqzone.com&Menu=yes"> <i class="iconfont icon-QQ-circle-fill"></i>
+
+                <div class="name">QQ</div>
+                <div class="desc">点击就可以联系我</div>
+            </a>
+            <a class="card item7" target="_blank" href="https://darkHalo.cn"> <i class="iconfont icon-chrome-fill"></i>
+
+                <div class="name">敬请期待</div>
+                <div class="desc">敬请期待</div>
+            </a>
+        </div>
+        <div class="copyright">CopyLeft ©{{new Date().getFullYear()}} darkHalo.cn</div>
+    </div>
+
+<script src="js/vue-2.6.10.min.js"></script>
+<script>
+    // 纯属调皮
+    // console.log(
+    //     "%c\n\n\t\t\t\t\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\t\t\t\t\n                  _oo0oo_                   \n                 088888880                  \n                 88\" . \"88                  \n                 (| -_- |)                  \n                  0\\ = /0                   \n               ___/'---'\\___                \n             .' \\\\\\|   |/// '.              \n            / \\\\\\||| : |||/// \\             \n           /_ ||||||-:-|||||| _\\            \n          |   | \\\\\\\\ - //// |   |           \n          | \\_|  ''\\---/''  |_/ |           \n           \\  .-\\__  '-'  __/-.  /          \n        ___'. .'  /--.--\\  '. .'___         \n     .\"\"  '< '.___\\_<|>_/___.' >'  \"\".      \n    | | : '-  \\'.:'\\ _ /':.'/ - ' : | |     \n    \\  \\ '_.   \\_ __\\ /__ _/   .-' /  /     \n     '-____'.___  \\_____/  ___.'____-'      \n                  '=---='                   \n^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n\t\t\t\t\t\t\t\t\t\t\t\n",
+    //     "background-color:yellow;color:orangered;");
+    // console.log("%c\nHello World\n", "font-size:20px;color:orangered;font-weight:bold;");
+</script>
+<script>
+    new Vue({
+        el: '#app',
+        data() {
+            return {}
+        },
+        created() { },
+        updated() { },
+        methods: {}
+    });
+
+    var AudioContext = AudioContext || webkitAudioContext;
+    var context = new AudioContext
+    var flag = true
+    var timer = null;
+    function makeNoise(num) {
+        if (flag) {
+            clearTimeout(timer)
+            flag = false;
+            const oscillator = context.createOscillator();
+            context.createChannelSplitter
+            oscillator.connect(context.destination);
+            oscillator.frequency.value = num;
+            oscillator.start(0);
+            timer = setTimeout(function () {
+                oscillator.disconnect();
+                flag = true;
+            }, 200)
+        }
+    }
+    window.onload = () => {
+        document.addEventListener("keyup", (e) => {
+            const num = parseInt(e.which * 10)
+            // console.log(num)
+            makeNoise(num)
+            // e.preventDefault()
+        })
+    }
+</script>
+
+</body></html>
