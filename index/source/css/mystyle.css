@@ -25,10 +25,7 @@
 
 body {
     margin: 100px 0;
-    background:linear-gradient(
-                to left,
-                rgb(50, 143, 230),
-                rgb(39, 189, 114)) ;
+    background:url("https://wx4.sinaimg.cn/mw690/640c032aly1hvg1gaxgzaj21qv0zkgny.jpg");
     transition: 0.3s;
 }
 
